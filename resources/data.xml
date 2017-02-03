@@ -25,15 +25,15 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="0" fixedrot="true" fric="0.0" gid="3" id="2" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Player" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="3" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="48" id="3" name="Player" shared="false" width="36">
-        <anim across="4" down="3" durations="50,50,50,50,50,50,50,50,50,50,50" height="144" id="0" loop="true" name="Walking" numframes="11" originx="18" originy="24" sync="false" version="2" width="144">
-            <poly data="4,0,0,36,0,36,48,0,48" density="0.1" fric="0.2" gid="-1000" id="0" name="Walking" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="38" id="3" name="Player" shared="false" width="29">
+        <anim across="4" down="4" durations="67,67,67,67,67,67,67,67,67,67,67,67,67,67,67" height="152" id="0" loop="true" name="Walking" numframes="15" originx="14" originy="19" sync="false" version="2" width="116">
+            <poly data="4,0,0,29,0,29,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Walking" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="47" id="1" loop="true" name="JumpUp" numframes="1" originx="17" originy="23" sync="false" version="2" width="34">
-            <poly data="4,0,0,34,0,34,48,0,48" density="0.1" fric="0.2" gid="-1000" id="0" name="JumpUp" rest="0.0" sensor="false"/>
+        <anim across="3" down="2" durations="67,67,67,67,67" height="80" id="1" loop="false" name="JumpUp" numframes="5" originx="14" originy="20" sync="false" version="2" width="87">
+            <poly data="4,0,0,29,0,29,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="JumpUp" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="36" id="2" loop="true" name="JumpDown" numframes="1" originx="17" originy="18" sync="false" version="2" width="34">
-            <poly data="4,0,0,34,0,34,48,0,48" density="0.1" fric="0.2" gid="-1000" id="0" name="JumpDown" rest="0.0" sensor="false"/>
+        <anim across="2" down="2" durations="67,67,67" height="80" id="2" loop="false" name="JumpDown" numframes="3" originx="14" originy="20" sync="false" version="2" width="58">
+            <poly data="4,0,0,29,0,29,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="JumpDown" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <tileset across="14" atlasID="0" desc="" down="7" id="6" name="TileSheet" oid="-1" shared="false" th="35" tw="35">

@@ -194,7 +194,7 @@
             </group>
         </step>
     </group>
-    <group eventID="4" id="6">
+    <group eventID="4" id="1">
         <push-shove2 comment="false" x="766" y="285">
             <ACTOR eid="lastcreated" id="0"/>
             <int id="1" val="1"/>
@@ -203,11 +203,11 @@
         </push-shove2>
     </group>
     <group eventID="4" id="-1">
+        <get-val-0-6 comment="false" x="619" y="221"/>
         <less comment="false" x="457" y="523">
             <int id="0" val=""/>
             <int id="1" val="0"/>
         </less>
-        <get-val-0-6 comment="false" x="619" y="221"/>
     </group>
     <group eventID="5" id="0">
         <step comment="false" x="15" y="15">
@@ -221,12 +221,12 @@
             </group>
         </step>
     </group>
-    <group eventID="5" id="3">
+    <group eventID="5" id="1">
         <debug-draw comment="false" x="496" y="123">
             <int id="0" val="0"/>
         </debug-draw>
     </group>
-    <group eventID="5" id="7">
+    <group eventID="5" id="2">
         <if comment="false" x="71" y="161">
             <group eventID="5" id="-1"/>
             <more comment="false" id="0" x="0" y="0">
