@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="This is attached to all 3 &amp;quot;platform&amp;quot; actors (which are set to tiles, no rotation, no pushing)."/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="This allows me to create the platforms off-screen so they keep on coming in."/>
+                </comment-short>
+                <ignore-screen-tolerance comment="false" x="26" y="80">
+                    <ACTOR eid="this" id="0"/>
+                </ignore-screen-tolerance>
+                <comment-short comment="false" x="26" y="107">
+                    <int id="0" val="The trick for truly infinite platformers is to have the player mostly stationary,"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="127">
+                    <int id="0" val="and have the platforms instead moving, which is initialized here."/>
+                </comment-short>
+                <set-dxy comment="false" x="26" y="147">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <get-game-val-0 comment="false" id="2" x="0" y="0"/>
+                </set-dxy>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="If the platform is off the screen to the left, kill itself (so it doesn&amp;apos;t lag the game)."/>
+                </comment-short>
+                <if comment="false" x="26" y="60">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="103">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-wh comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-wh>
+                        </plus>
+                        <int id="1" val="0"/>
+                    </less>
+                </if>
+                <backforward comment="false" x="26" y="142">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="2"/>
+                </backforward>
+                <movewithinlayer comment="false" x="26" y="169">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="2"/>
+                </movewithinlayer>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="The speed will likely change when the platform is already in motion,"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="so keep resetting it to the true speed to catch the changing values."/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="80">
+                    <int id="0" val="Again, remember the trick is to have the platforms moving instead of the player!"/>
+                </comment-short>
+                <set-dxy comment="false" x="26" y="100">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <get-game-val-0 comment="false" id="2" x="0" y="0"/>
+                </set-dxy>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

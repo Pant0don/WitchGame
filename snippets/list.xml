@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pack>
+    <snippet actorid="2" attachedevent="true" class="scripts.ActorEvents_2" classname="scripts.ActorEvents_2" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="0" name="ActorEvents_2" oid="-1" package="scripts." shared="false" type="actor">
+        <number default="50" defaultValue="50" desc="" dropdown="" fullname="JumpHeight" hidden="false" id="1" name="_JumpHeight" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="OnGround" hidden="false" id="2" name="_OnGround" order="1"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="CanShoot" hidden="false" id="3" name="_CanShoot" order="2"/>
+        <number default="30" defaultValue="30" desc="" dropdown="" fullname="BulletSpeed" hidden="false" id="4" name="_BulletSpeed" order="3"/>
+        <number default=".2" defaultValue=".2" desc="" dropdown="" fullname="BulletCooldown" hidden="false" id="5" name="_BulletCooldown" order="4"/>
+        <number default="11" defaultValue="11" desc="" dropdown="" fullname="PushBack" hidden="false" id="6" name="_PushBack" order="5"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Jumping" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Actor - Group" enabled="true" id="3" name="event-collide-actortogroup" order="5" repeats="true"/>
+            <event displayName="Shooting" enabled="true" id="4" name="step" order="3" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="5" name="step" order="4" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="1" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="SpeedUpRate" hidden="false" id="3" name="_SpeedUpRate" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="X" hidden="false" id="4" name="_X" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Y" hidden="false" id="5" name="_Y" order="2"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Width" hidden="false" id="6" name="_Width" order="3"/>
+        <number default="1000" defaultValue="1000" desc="" dropdown="" fullname="PlatformHeight" hidden="false" id="7" name="_PlatformHeight" order="4"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="LastCreatedPlatform" hidden="false" id="8" name="_LastCreatedPlatform" order="5"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="PLayer" hidden="false" id="9" name="_PLayer" order="6"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Updating" enabled="false" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Creating Platforms" enabled="true" id="3" name="step" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="7" attachedevent="true" class="scripts.ActorEvents_7" classname="scripts.ActorEvents_7" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="2" name="ActorEvents_7" oid="-1" package="scripts." shared="false" type="actor">
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="X" hidden="false" id="1" name="_X" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Y" hidden="false" id="2" name="_Y" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Width" hidden="false" id="3" name="_Width" order="2"/>
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_3_3_Platform" classname="scripts.Design_3_3_Platform" desc="" description="" design="true" drawOrder="0" id="3" name="Platform" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="9" attachedevent="true" class="scripts.ActorEvents_9" classname="scripts.ActorEvents_9" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="4" name="ActorEvents_9" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_5_5_Controls" classname="scripts.Design_5_5_Controls" desc="" description="" design="true" drawOrder="0" id="5" name="Controls" oid="-1" package="scripts" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
+    </snippet>
+</pack>
