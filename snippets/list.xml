@@ -38,17 +38,18 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Width" hidden="false" id="6" name="_Width" order="3"/>
         <number default="1000" defaultValue="1000" desc="" dropdown="" fullname="PlatformHeight" hidden="false" id="7" name="_PlatformHeight" order="4"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="LastCreatedPlatform" hidden="false" id="8" name="_LastCreatedPlatform" order="5"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="PLayer" hidden="false" id="9" name="_PLayer" order="7"/>
-        <number default="1000000.0" defaultValue="1000000.0" desc="" dropdown="" fullname="Score" hidden="false" id="10" name="_Score" order="8"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="FlyingEnemyCanSpawn" hidden="false" id="11" name="_FlyingEnemyCanSpawn" order="9"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="SpawnPosition" hidden="false" id="12" name="_SpawnPosition" order="10"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="TopFlying" hidden="false" id="13" name="_TopFlying" order="11"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="MidFlying" hidden="false" id="14" name="_MidFlying" order="12"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="BotFlying" hidden="false" id="15" name="_BotFlying" order="13"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="CurrentTop" hidden="false" id="16" name="_CurrentTop" order="14"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="CurrentMid" hidden="false" id="17" name="_CurrentMid" order="15"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="CurrentBot" hidden="false" id="18" name="_CurrentBot" order="16"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="PLayer" hidden="false" id="9" name="_PLayer" order="8"/>
+        <number default="1000000.0" defaultValue="1000000.0" desc="" dropdown="" fullname="Score" hidden="false" id="10" name="_Score" order="9"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="FlyingEnemyCanSpawn" hidden="false" id="11" name="_FlyingEnemyCanSpawn" order="10"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="SpawnPosition" hidden="false" id="12" name="_SpawnPosition" order="11"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="TopFlying" hidden="false" id="13" name="_TopFlying" order="12"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="MidFlying" hidden="false" id="14" name="_MidFlying" order="13"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="BotFlying" hidden="false" id="15" name="_BotFlying" order="14"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="CurrentTop" hidden="false" id="16" name="_CurrentTop" order="15"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="CurrentMid" hidden="false" id="17" name="_CurrentMid" order="16"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="CurrentBot" hidden="false" id="18" name="_CurrentBot" order="17"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="LastCreatedBackground" hidden="false" id="19" name="_LastCreatedBackground" order="6"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="LastCreatedBackgroundFar" hidden="false" id="20" name="_LastCreatedBackgroundFar" order="7"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
@@ -58,6 +59,7 @@
             <event displayName="EnemySpawner" enabled="false" id="5" name="step" order="2" repeats="true"/>
             <event displayName="Every N secs" enabled="false" id="6" name="event-periodic" order="8" repeats="true"/>
             <event displayName="EnemyCheck" enabled="false" id="7" name="step" order="9" repeats="true"/>
+            <event displayName="Creating Background" enabled="true" id="8" name="step" order="19" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="7" attachedevent="true" class="scripts.ActorEvents_7" classname="scripts.ActorEvents_7" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="2" name="ActorEvents_7" oid="-1" package="scripts." shared="false" type="actor">
@@ -132,6 +134,19 @@
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
             <event displayName="After N secs" enabled="true" id="2" name="event-delay" order="2" repeats="true"/>
             <event displayName="Created" enabled="true" id="3" name="init" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="18" attachedevent="true" class="scripts.ActorEvents_18" classname="scripts.ActorEvents_18" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="9" name="ActorEvents_18" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_10_10" classname="scripts.Design_10_10" desc="" description="" design="true" drawOrder="0" id="10" name="BackgroundFar" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="3" repeats="true"/>
         </events>
     </snippet>
 </pack>

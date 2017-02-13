@@ -24,8 +24,24 @@
                 <set-val-1-8 comment="false" x="106" y="152">
                     <ACTOR eid="lastcreated" id="0"/>
                 </set-val-1-8>
+                <create-actor3 comment="false" x="106" y="179">
+                    <actortype eid="18" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="-160"/>
+                    <int id="3" val="2"/>
+                </create-actor3>
+                <set-val-1-20 comment="false" x="106" y="206">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </set-val-1-20>
             </group>
         </init>
+    </group>
+    <group eventID="1" id="1">
+        <setlayer2 comment="false" x="778" y="225">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="1"/>
+        </setlayer2>
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
@@ -100,18 +116,18 @@
         </movewithinlayer>
     </group>
     <group eventID="3" id="-1">
-        <plus comment="false" x="398" y="416">
-            <int id="0" val=""/>
-            <int id="1" val="1"/>
-        </plus>
-        <minus comment="false" x="273" y="289">
-            <int id="0" val=""/>
-            <int id="1" val="10"/>
-        </minus>
         <minus comment="false" x="262" y="399">
             <int id="0" val=""/>
             <int id="1" val="10"/>
         </minus>
+        <minus comment="false" x="273" y="289">
+            <int id="0" val=""/>
+            <int id="1" val="10"/>
+        </minus>
+        <plus comment="false" x="398" y="416">
+            <int id="0" val=""/>
+            <int id="1" val="1"/>
+        </plus>
     </group>
     <group eventID="4" id="0">
         <draw comment="false" x="15" y="15">
@@ -174,26 +190,26 @@
         </draw-text>
     </group>
     <group eventID="4" id="-1">
-        <str-substring comment="false" x="108" y="160">
-            <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-            <int id="1" val="1"/>
-            <int id="2" val="7"/>
-        </str-substring>
-        <str-substring comment="false" x="272" y="368">
-            <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-            <int id="1" val="1"/>
-            <int id="2" val="7"/>
-        </str-substring>
-        <get-val-1-16 comment="false" x="76" y="300"/>
-        <get-val-1-17 comment="false" x="91" y="409"/>
-        <get-val-1-18 comment="false" x="143" y="480"/>
-        <get-val-1-15 comment="false" x="602" y="286"/>
-        <get-val-1-15 comment="false" x="405" y="230"/>
         <get-attribute comment="false" x="225" y="570">
             <ACTOR eid="var" id="0" vid="18"/>
             <int id="1" val="ActorEvents_12"/>
             <int id="2" val="_EnemyHealth"/>
         </get-attribute>
+        <get-val-1-15 comment="false" x="405" y="230"/>
+        <get-val-1-15 comment="false" x="602" y="286"/>
+        <get-val-1-18 comment="false" x="143" y="480"/>
+        <get-val-1-17 comment="false" x="91" y="409"/>
+        <get-val-1-16 comment="false" x="76" y="300"/>
+        <str-substring comment="false" x="272" y="368">
+            <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val="7"/>
+        </str-substring>
+        <str-substring comment="false" x="108" y="160">
+            <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val="7"/>
+        </str-substring>
     </group>
     <group eventID="5" id="0">
         <step comment="false" x="15" y="15">
@@ -416,4 +432,77 @@
         </set-val-1-13>
     </group>
     <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="8" id="-1">
+                        <create-actor3 comment="false" x="37" y="83">
+                            <actortype eid="18" id="0"/>
+                            <screen-wh comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </screen-wh>
+                            <int id="2" val="-160"/>
+                            <int id="3" val="2"/>
+                        </create-actor3>
+                        <set-val-1-20 comment="false" x="37" y="123">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-1-20>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="20"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-wh comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="var" id="0" vid="20"/>
+                                <int id="1" val="0"/>
+                            </get-wh>
+                        </plus>
+                        <screen-wh comment="false" id="1" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </screen-wh>
+                    </less>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="8" id="1">
+        <movewithinlayer comment="false" x="234" y="238">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="0"/>
+        </movewithinlayer>
+    </group>
+    <group eventID="8" id="2">
+        <set-val-1-8 comment="false" x="576" y="426">
+            <ACTOR eid="lastcreated" id="0"/>
+        </set-val-1-8>
+    </group>
+    <group eventID="8" id="3">
+        <set-val-1-19 comment="false" x="765" y="267">
+            <ACTOR eid="lastcreated" id="0"/>
+        </set-val-1-19>
+    </group>
+    <group eventID="8" id="4">
+        <setlayer2 comment="false" x="0" y="418">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="1"/>
+        </setlayer2>
+    </group>
+    <group eventID="8" id="-1">
+        <minus comment="false" x="273" y="289">
+            <int id="0" val=""/>
+            <int id="1" val="10"/>
+        </minus>
+        <plus comment="false" x="398" y="416">
+            <int id="0" val=""/>
+            <int id="1" val="1"/>
+        </plus>
+        <minus comment="false" x="262" y="399">
+            <int id="0" val=""/>
+            <int id="1" val="10"/>
+        </minus>
+    </group>
 </groups>
