@@ -84,7 +84,7 @@
                     <group eventID="2" id="-1">
                         <setanim comment="false" x="37" y="403">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="Walking"/>
+                            <int id="1" val="Running"/>
                         </setanim>
                     </group>
                 </else>
@@ -203,11 +203,11 @@
         </push-shove2>
     </group>
     <group eventID="4" id="-1">
-        <get-val-0-6 comment="false" x="619" y="221"/>
         <less comment="false" x="457" y="523">
             <int id="0" val=""/>
             <int id="1" val="0"/>
         </less>
+        <get-val-0-6 comment="false" x="619" y="221"/>
     </group>
     <group eventID="5" id="0">
         <step comment="false" x="15" y="15">
