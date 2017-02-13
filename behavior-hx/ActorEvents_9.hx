@@ -71,11 +71,17 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class ActorEvents_9 extends ActorScript
 {
+	public var _Damage:Float;
+	public var _canDamage:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Damage", "_Damage");
+		_Damage = 1.0;
+		nameMap.set("canDamage", "_canDamage");
+		_canDamage = true;
 		
 	}
 	
@@ -84,6 +90,27 @@ class ActorEvents_9 extends ActorScript
 		
 		/* ======================== When Creating ========================= */
 		actor.makeAlwaysSimulate();
+		_Damage = asNumber(1);
+		propertyChanged("_Damage", _Damage);
+		
+		/* ======================= Member of Group ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorGroup(5),event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if(_canDamage)
+				{
+					_canDamage = false;
+					propertyChanged("_canDamage", _canDamage);
+					actor.getLastCollidedActor().setValue("ActorEvents_12", "_Damage", _Damage);
+					event.otherActor.shout("_customEvent_" + "Hit");
+					runLater(1000 * .05, function(timeTask:TimedTask):Void
+					{
+						recycleActor(actor);
+					}, actor);
+				}
+			}
+		});
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void

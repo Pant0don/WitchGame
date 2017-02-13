@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="78">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <isonscreen comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </isonscreen>
+                    </not>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1">
+        <plus comment="false" x="391" y="261">
+            <int id="0" val=""/>
+            <int id="1" val="20"/>
+        </plus>
+        <more comment="false" x="753" y="156">
+            <int id="0" val=""/>
+            <int id="1" val=""/>
+        </more>
+        <less comment="false" x="178" y="456">
+            <get-xy comment="false" id="0" x="0" y="0">
+                <ACTOR eid="this" id="0"/>
+                <int id="1" val="0"/>
+            </get-xy>
+            <minus comment="false" id="1" x="0" y="0">
+                <screen-wh comment="false" id="0" x="0" y="0">
+                    <int id="0" val="0"/>
+                </screen-wh>
+                <int id="1" val="20"/>
+            </minus>
+        </less>
+    </group>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <ignore-screen-tolerance comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </ignore-screen-tolerance>
+                <set-val-4-1 comment="false" x="26" y="67">
+                    <int id="0" val="1"/>
+                </set-val-4-1>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <shout comment="false" x="26" y="47">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="Hit"/>
+                </shout>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="2" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="3" id="1">
+        <if comment="false" x="173" y="333">
+            <group eventID="3" id="-1"/>
+            <eq comment="false" id="0" x="0" y="0">
+                <get-xy comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                </get-xy>
+                <get-xy comment="false" id="1" x="0" y="0">
+                    <ACTOR eid="lastcollided" id="0"/>
+                    <int id="1" val="0"/>
+                </get-xy>
+            </eq>
+        </if>
+    </group>
+    <group eventID="3" id="3">
+        <if comment="false" x="30" y="177">
+            <group eventID="3" id="-1"/>
+            <eq comment="false" id="0" x="0" y="0">
+                <get-attribute comment="false" id="0" x="0" y="0">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="ActorEvents_2"/>
+                    <int id="2" val="_CanBeHit"/>
+                </get-attribute>
+                <true comment="false" id="1" x="0" y="0"/>
+            </eq>
+        </if>
+    </group>
+    <group eventID="3" id="4">
+        <dolater comment="false" x="53" y="511">
+            <group eventID="3" id="-1">
+                <die comment="false" x="64" y="538">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <int id="0" val=".05"/>
+            <ACTOR eid="this" id="2"/>
+        </dolater>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

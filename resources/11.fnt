@@ -1,0 +1,16 @@
+#
+#Mon Jan 30 23:42:56 CET 2017
+style=bold
+alphabet=
+color=\#000000
+stroke.color=\#ffffff
+shadow.y=0
+family=SansSerif
+shadow.x=0
+shadow.color=\#000000
+gradient.offset=3
+shadow.blur=0
+chars=all
+stroke.size=1
+antialias=false
+size=19

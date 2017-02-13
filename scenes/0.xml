@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="1" desc="" eventsnippetid="1" extheight="320" extwidth="512" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="75.0" height="256" id="0" name="MainScene" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="448">
+<scene depth="1" desc="" eventsnippetid="1" extheight="448" extwidth="512" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="95.0" height="384" id="0" name="MainScene" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="448">
     <layers>
         <grad-bg b1="255" b2="204" g1="153" g2="204" r1="255" r2="255"/>
-        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="2" locked="true" name="BG02" opacity="100" order="1" rid="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="true" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
     <regions/>

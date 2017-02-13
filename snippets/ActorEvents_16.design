@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <apply-filter comment="false" x="37" y="70">
+                            <ACTOR eid="this" id="0"/>
+                            <filter-tint comment="false" id="1" x="0" y="0">
+                                <color b="255" g="255" id="0" r="255"/>
+                                <int id="1" val="100"/>
+                            </filter-tint>
+                        </apply-filter>
+                        <backforward comment="false" x="37" y="110">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </backforward>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="149">
+                    <group eventID="1" id="-1">
+                        <apply-filter comment="false" x="37" y="179">
+                            <ACTOR eid="this" id="0"/>
+                            <filter-tint comment="false" id="1" x="0" y="0">
+                                <color b="153" g="153" id="0" r="153"/>
+                                <int id="1" val="100"/>
+                            </filter-tint>
+                        </apply-filter>
+                        <set-opacity comment="false" x="37" y="219">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="50"/>
+                        </set-opacity>
+                        <backforward comment="false" x="37" y="246">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </backforward>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="2"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="285">
+                    <group eventID="1" id="-1">
+                        <apply-filter comment="false" x="37" y="315">
+                            <ACTOR eid="this" id="0"/>
+                            <filter-tint comment="false" id="1" x="0" y="0">
+                                <color b="153" g="153" id="0" r="153"/>
+                                <int id="1" val="100"/>
+                            </filter-tint>
+                        </apply-filter>
+                        <set-opacity comment="false" x="37" y="355">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="50"/>
+                        </set-opacity>
+                        <backforward comment="false" x="37" y="382">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </backforward>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="3"/>
+                    </eq>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="1">
+        <get-wh comment="false" x="596" y="143">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+        </get-wh>
+    </group>
+    <group eventID="1" id="2">
+        <image-set-props2 comment="false" x="432" y="370">
+            <int id="0" val=""/>
+            <int id="1" val="0"/>
+            <int id="2" val=""/>
+        </image-set-props2>
+    </group>
+    <group eventID="1" id="3">
+        <image-filter comment="false" x="983" y="510">
+            <int id="0" val=""/>
+            <int id="1" val=""/>
+        </image-filter>
+    </group>
+    <group eventID="1" id="4">
+        <set-alpha comment="false" x="828" y="631">
+            <int id="0" val=""/>
+        </set-alpha>
+    </group>
+    <group eventID="1" id="5">
+        <set-opacity comment="false" x="93" y="502">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+        </set-opacity>
+    </group>
+    <group eventID="1" id="6">
+        <set-opacity comment="false" x="142" y="632">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="50"/>
+        </set-opacity>
+    </group>
+    <group eventID="1" id="-1">
+        <filter-tint comment="false" x="216" y="528">
+            <color b="0" g="0" id="0" r="255"/>
+            <int id="1" val="100"/>
+        </filter-tint>
+        <filter-hsb comment="false" x="774" y="182">
+            <int id="0" val="270"/>
+        </filter-hsb>
+        <filter-hsb comment="false" x="680" y="84">
+            <int id="0" val="0"/>
+        </filter-hsb>
+        <filter-hsb comment="false" x="695" y="245">
+            <int id="0" val="180"/>
+        </filter-hsb>
+    </group>
+    <group eventID="2" id="0">
+        <event-delay comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <die comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <int id="0" val="2"/>
+            <ACTOR eid="this" id="2"/>
+        </event-delay>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <ignore-screen-tolerance comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </ignore-screen-tolerance>
+                <set-dxy comment="false" x="26" y="67">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <randomfloat comment="false" id="2" x="0" y="0">
+                        <int id="0" val="-8"/>
+                        <int id="1" val="-1"/>
+                    </randomfloat>
+                </set-dxy>
+                <set-dxy comment="false" x="26" y="99">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <randint comment="false" id="2" x="0" y="0">
+                        <int id="0" val="-4"/>
+                        <int id="1" val="4"/>
+                    </randint>
+                </set-dxy>
+                <scaleTo comment="false" x="26" y="131">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                    <randint comment="false" id="3" x="0" y="0">
+                        <int id="0" val=".8"/>
+                        <int id="1" val="2"/>
+                    </randint>
+                    <int id="4" val="1"/>
+                </scaleTo>
+                <set-val-8-1 comment="false" x="26" y="163">
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <int id="1" val="3"/>
+                    </randint>
+                </set-val-8-1>
+            </group>
+        </init>
+    </group>
+    <group eventID="3" id="1">
+        <if comment="false" x="84" y="351">
+            <group eventID="3" id="-1">
+                <apply-filter comment="false" x="95" y="381">
+                    <ACTOR eid="this" id="0"/>
+                    <filter-tint comment="false" id="1" x="0" y="0">
+                        <color b="0" g="0" id="0" r="255"/>
+                        <int id="1" val="100"/>
+                    </filter-tint>
+                </apply-filter>
+            </group>
+            <eq comment="false" id="0" x="0" y="0">
+                <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="1"/>
+            </eq>
+        </if>
+        <else-if comment="false" x="84" y="433">
+            <group eventID="3" id="-1">
+                <apply-filter comment="false" x="95" y="463">
+                    <ACTOR eid="this" id="0"/>
+                    <filter-tint comment="false" id="1" x="0" y="0">
+                        <color b="255" g="255" id="0" r="255"/>
+                        <int id="1" val="100"/>
+                    </filter-tint>
+                </apply-filter>
+            </group>
+            <eq comment="false" id="0" x="0" y="0">
+                <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="2"/>
+            </eq>
+        </else-if>
+        <else-if comment="false" x="84" y="515">
+            <group eventID="3" id="-1">
+                <apply-filter comment="false" x="95" y="545">
+                    <ACTOR eid="this" id="0"/>
+                    <filter-tint comment="false" id="1" x="0" y="0">
+                        <color b="153" g="153" id="0" r="153"/>
+                        <int id="1" val="100"/>
+                    </filter-tint>
+                </apply-filter>
+            </group>
+            <eq comment="false" id="0" x="0" y="0">
+                <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="3"/>
+            </eq>
+        </else-if>
+    </group>
+    <group eventID="3" id="-1">
+        <filter-hsb comment="false" x="482" y="276">
+            <int id="0" val=""/>
+        </filter-hsb>
+        <randomfloat comment="false" x="778" y="439">
+            <int id="0" val="1"/>
+            <int id="1" val="3"/>
+        </randomfloat>
+    </group>
+</groups>

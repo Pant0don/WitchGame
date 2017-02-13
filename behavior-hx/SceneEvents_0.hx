@@ -79,6 +79,16 @@ class SceneEvents_0 extends SceneScript
 	public var _PlatformHeight:Float;
 	public var _LastCreatedPlatform:Actor;
 	public var _PLayer:Actor;
+	public var _Score:Float;
+	public var _FlyingEnemyCanSpawn:Bool;
+	public var _SpawnPosition:Float;
+	public var _TopFlying:Bool;
+	public var _MidFlying:Bool;
+	public var _BotFlying:Bool;
+	public var _CurrentTop:Actor;
+	public var _CurrentMid:Actor;
+	public var _CurrentBot:Actor;
+	public var _LastCreatedBackground:Actor;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
@@ -96,6 +106,22 @@ class SceneEvents_0 extends SceneScript
 		_PlatformHeight = 1000.0;
 		nameMap.set("LastCreatedPlatform", "_LastCreatedPlatform");
 		nameMap.set("PLayer", "_PLayer");
+		nameMap.set("Score", "_Score");
+		_Score = 1000000.0;
+		nameMap.set("FlyingEnemyCanSpawn", "_FlyingEnemyCanSpawn");
+		_FlyingEnemyCanSpawn = false;
+		nameMap.set("SpawnPosition", "_SpawnPosition");
+		_SpawnPosition = 0.0;
+		nameMap.set("TopFlying", "_TopFlying");
+		_TopFlying = false;
+		nameMap.set("MidFlying", "_MidFlying");
+		_MidFlying = false;
+		nameMap.set("BotFlying", "_BotFlying");
+		_BotFlying = false;
+		nameMap.set("CurrentTop", "_CurrentTop");
+		nameMap.set("CurrentMid", "_CurrentMid");
+		nameMap.set("CurrentBot", "_CurrentBot");
+		nameMap.set("LastCreatedBackground", "_LastCreatedBackground");
 		
 	}
 	
@@ -103,25 +129,35 @@ class SceneEvents_0 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("Speed", -15);
-		createRecycledActor(getActorType(2), 100, 100, Script.FRONT);
+		Engine.engine.setGameAttribute("Speed", -20);
+		createRecycledActor(getActorType(2), 50, 250, Script.FRONT);
 		_PLayer = getLastCreatedActor();
 		propertyChanged("_PLayer", _PLayer);
-		createRecycledActor(getActorType(7), 0, 200, Script.BACK);
+		createRecycledActor(getActorType(7), 0, 350, Script.BACK);
 		_LastCreatedPlatform = getLastCreatedActor();
 		propertyChanged("_LastCreatedPlatform", _LastCreatedPlatform);
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.setFont(getFont(11));
+				g.drawString("" + ("" + Engine.engine.getGameAttribute("Score")).substring(Std.int(1), Std.int(7)), 5, 5);
+				g.drawString("" + _PLayer.getValue("ActorEvents_2", "_Magazine"), 5, 20);
+			}
+		});
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(((_LastCreatedPlatform.getX() + (_LastCreatedPlatform.getWidth())) < (getScreenWidth() + 1)))
+				if(((_LastCreatedPlatform.getX() + (_LastCreatedPlatform.getWidth())) < getScreenWidth()))
 				{
-					createRecycledActor(getActorType(7), getScreenWidth(), 200, Script.BACK);
+					createRecycledActor(getActorType(7), getScreenWidth(), 350, Script.BACK);
 					_LastCreatedPlatform = getLastCreatedActor();
 					propertyChanged("_LastCreatedPlatform", _LastCreatedPlatform);
-					getLastCreatedActor().moveDown();
 				}
 			}
 		});

@@ -32,8 +32,57 @@
                 <ignore-screen-tolerance comment="false" x="26" y="40">
                     <ACTOR eid="this" id="0"/>
                 </ignore-screen-tolerance>
+                <set-val-4-1 comment="false" x="26" y="67">
+                    <int id="0" val="1"/>
+                </set-val-4-1>
             </group>
         </init>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="4" id="0">
+        <event-collide-actortogroup comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="4" id="-1">
+                        <set-val-4-2 comment="false" x="37" y="72">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-4-2>
+                        <set-attribute comment="false" x="37" y="97">
+                            <ACTOR eid="lastcollided" id="0"/>
+                            <int id="1" val="ActorEvents_12"/>
+                            <int id="2" val="_Damage"/>
+                            <get-val-4-1 comment="false" id="3" x="0" y="0"/>
+                        </set-attribute>
+                        <shout comment="false" x="37" y="129">
+                            <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Hit"/>
+                        </shout>
+                        <dolater comment="false" x="37" y="161">
+                            <group eventID="4" id="-1">
+                                <die comment="false" x="48" y="188">
+                                    <ACTOR eid="this" id="0"/>
+                                </die>
+                            </group>
+                            <int id="0" val=".05"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <get-val-4-2 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actorgroup eid="5" id="1"/>
+        </event-collide-actortogroup>
+    </group>
+    <group eventID="4" id="4">
+        <if comment="false" x="64" y="282">
+            <group eventID="4" id="-1"/>
+            <get-attribute comment="false" id="0" x="0" y="0">
+                <ACTOR eid="this" id="0"/>
+                <int id="1" val="ActorEvents_2"/>
+                <int id="2" val="_CanBeHit"/>
+            </get-attribute>
+        </if>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>
